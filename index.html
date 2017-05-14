@@ -3,20 +3,47 @@
 <head>
 	<meta charset="UTF-8"/>
 	<title>Angular 1</title>
+	<!-- purposefully not using angularJs here, to identify the AngularJS under the hood
 	<script src="angular.min.js"></script>
+	-->
 	<script src="app.js"></script>
 </head>
 
-<body ng-app="myCalculator">
-	<h2>Angular1 App1</h2>
-	<div ng-controller="myCalculatorController">
+<body>
+	<h2>Angular1 Under the hood</h2>
+	<div id='target' ng-controller="myCalculatorController">
 		Please input the name: <input id='name' ng-model='name' ng-keyup="calculateTotal()"/>
 		<p>
 		The total value of the name is: {{totalValue}}	
 
 		<p/>
         {{click()}}
+
+		</p>
+
+		<br />
+
+		The value of ng-controller attribute is : 
+
+		<span id='checkAttr'>
+		</span>
 	</div>
+
+	<script>
+		var elem = document.getElementById('target');
+		console.log(elem);
+
+		var attrNgController = elem.getAttribute('ng-controller');
+		console.log("ng-controller attribute value: " + attrNgController);
+
+		document.getElementById('checkAttr').innerText = attrNgController;
+
+		var elem2 = document.querySelector('[ng-controller]');
+		console.log('query-selector value is : ' + elem2);
+		console.log('get attr : ' + elem2.getAttribute('ng-controller'));
+	</script>
+
+
 </body>
 
 </html>
