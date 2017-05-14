@@ -7,11 +7,14 @@
 	<script src="app.js"></script>
 </head>
 
-<body ng-app="myApp">
+<body ng-app="myCalculator">
 	<h2>Angular1 App1</h2>
-	<div ng-controller="myController">
-		{{name}}
+	<div ng-controller="myCalculatorController">
+		Please input the name: <input id='name' ng-model='name' ng-keyup="calculateTotal()"/>
 		<p>
+		The total value of the name is: {{totalValue}}	
+
+		<p/>
         {{click()}}
 	</div>
 </body>

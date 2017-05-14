@@ -1,12 +1,29 @@
 (function(angular) {
-    'use restrict';
+    'use strict';
 
-    angular.module("myApp", [])
-        .controller("myController", function($scope) {
-            $scope.name = "John Doe";
+    angular.module('myCalculator', [])
+    .controller('myCalculatorController', function($scope) {
 
-            $scope.click = function() {
-                return "clicked function";
+        $scope.name = "";
+        $scope.totalValue = 0;
+
+        $scope.calculateTotal = function () {
+            if (angular.isUndefined($scope.name)) {
+                return;
             }
-        });
+
+            $scope.totalValue = 0;
+
+            var i;
+            for (i = 0; i < $scope.name.length; i++) {
+                $scope.totalValue += $scope.name.charCodeAt(i);
+            }
+        };
+
+        $scope.click = function() {
+            return 'click function was called';
+        };
+
+    });
+
 })(window.angular);
