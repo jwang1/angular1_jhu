@@ -7,9 +7,9 @@
 	<script src="app.js"></script>
 </head>
 
-<body ng-app='MsgApp'>
+<body ng-app='MyExpressionInterpolationApp'>
 	<h2>Angular1 expression interpolation part-1 hello2</h2>
-	<div ng-controller="MsgController">
+	<div ng-controller="MyExpressionInterpolationController">
 		Please input the name: <input type='text' ng-model='name'/>
 		<p>
 		<p/>
@@ -22,6 +22,19 @@
 
 		<span id='checkAttr'>
 		</span>
+
+
+		<div>
+			<br/>
+			<br/>
+			<button id="toggleSize" name="toggleSize" text="toggle size" ng-click="toggleSize();">
+				{{size}} Size Ball
+			</button>
+			<br/>
+			<br/>
+			<img ng-src="images/pingPong_{{size}}.png"
+		</div>
+
 	</div>
 
 </body>

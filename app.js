@@ -1,17 +1,18 @@
 (function(angular) {
-    angular.module('MsgApp', [])
-    .controller('MsgController', MsgController);
+    angular.module('MyExpressionInterpolationApp', [])
+    .controller('MyExpressionInterpolationController', MyExpressionInterpolationController);
 
-    MsgController.$inject = ['$scope', '$filter', '$injector'];
+    MyExpressionInterpolationController.$inject = ['$scope', '$filter', '$injector'];
 
-    function MsgController($scope, $filter, $injector) {
-        $scope.name = 'Joe';
-    };
+    function MyExpressionInterpolationController($scope, $filter, $injector) {
+        $scope.size = 'small';
 
-    function sayMessage() {
-        $scope.msg = 'some messages from the conference.';
-
-        return $scope.msg;
+        $scope.toggleSize = function() {
+            if ($scope.size == 'small') {
+                $scope.size = 'large';
+            } else {
+                $scope.size = 'small';
+            }
+        }
     }
-
 })(window.angular);
