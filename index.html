@@ -7,14 +7,15 @@
 	<script src="app.js"></script>
 </head>
 
-<body ng-app='DiApp'>
-	<h2>Angular1 Inversion of Control (IoC)</h2>
-	<div ng-controller="DiController">
-		Please input the name: <input type='text' ng-model='name' ng-blur="showUpperCase();"/>
+<body ng-app='MsgApp'>
+	<h2>Angular1 expression interpolation part-1 hello2</h2>
+	<div ng-controller="MsgController">
+		Please input the name: <input type='text' ng-model='name'/>
 		<p>
 		<p/>
-		</p>
 
+		</p>
+		There is a message for you {{sayMessage()}}
 		<br />
 
 		The value of ng-controller attribute is : 
