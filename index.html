@@ -1,42 +1,24 @@
-<!DocType html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8"/>
-	<title>Angular 1</title>
-	<script src="angular.js"></script>
-	<script src="app.js"></script>
-</head>
+<!doctype html>
 
-<body ng-app='MyExpressionInterpolationApp'>
-	<h2>Angular1 expression interpolation part-1 hello2</h2>
-	<div ng-controller="MyExpressionInterpolationController">
-		Please input the name: <input type='text' ng-model='name'/>
-		<p>
-		<p/>
+<html>
+    <head>
+        <meta charset='UTF-8'/>
+        <title>Homework #1 for JHU SPA with Angular</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
 
-		</p>
-		There is a message for you {{sayMessage()}}
-		<br />
-
-		The value of ng-controller attribute is : 
-
-		<span id='checkAttr'>
-		</span>
-
-
-		<div>
-			<br/>
-			<br/>
-			<button id="toggleSize" name="toggleSize" text="toggle size" ng-click="toggleSize();">
-				{{size}} Size Ball
-			</button>
-			<br/>
-			<br/>
-			<img ng-src="images/pingPong_{{size}}.png"
-		</div>
-
-	</div>
-
-</body>
-
+    <body ng-app="SpaAngularHomework1App">
+        <div ng-controller="SpaAngularHomework1Controller">
+            <br/>
+            <br/>
+            Please input lunch items (separated by comma) 
+            <input type="text" ng-model="items" ng-style="inputTextStyle" />
+            <br/>
+            {{suggestions}}
+            <br/>
+            <button id="checkItems" name="checkItems" ng-click="checkLunchItems();">Check If too Much</button>
+            <br/>
+        </div>
+    </body>
 </html>

@@ -1,3 +1,2 @@
-# angular1_jhu
-
-Angular 1 stuff 
+# angular_jhu_hw1
+Homework #1 for JHU's SPA with Angular
