@@ -1,4 +1,4 @@
-<!DocType html>
+<!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8"/>
@@ -7,11 +7,18 @@
 	<script src="app.js"></script>
 </head>
 
-<body ng-app='MyExpressionInterpolationApp'>
+<body ng-app='MyFilterApp'>
 	<h2>Angular1 expression interpolation part-1 hello2</h2>
-	<div ng-controller="MyExpressionInterpolationController">
-		Please input the name: <input type='text' ng-model='name'/>
+	<div ng-controller="MyFilterController">
+		Please input the name: <input type='text' ng-model='name' ng-keyup="makeNameUppercase();" />
 		<p>
+        <br/>
+		Name in upper cases-using-service: {{nameUppercase}}
+		<br/>
+		Name in upper cases-using-expression: {{name | uppercase}}
+		<br/>
+		<br/>
+		hourly rate: {{rate | currency : '$' : 3}}
 		<p/>
 
 		</p>
